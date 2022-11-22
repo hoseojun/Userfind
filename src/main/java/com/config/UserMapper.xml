@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.config.UserMapper">
+	<select id="userFind" resultType="UserDTO">
+		SELECT id, name, age from usertb WHERE id=#{id}
+	</select>
+	
+	<select id="findId" resultType="_int">
+		SELECT count(*) from usertb WHERE id=#{id}
+	</select>
+</mapper>
